@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/商家信息.css" type="text/css"/>
+	<script>
+		var i1 =0;
+		var i2 =0;
+		var i3 = 0;
+		var i4 = 0;
+		var i5 = 0;
+		var sum = 0;
+		var sum2 =0;
+		var sum3 = 0;
+		var sum4 = 0;
+		var sum5 = 0;
+		function add1(num){
+			var list = document.getElementsByClassName("list");
+			var list2 = document.getElementsByClassName("list2");
+			var list3 = document.getElementsByClassName("list3");
+			var list4 = document.getElementsByClassName("list4");
+			var list5 = document.getElementsByClassName("list5");
+			if(num==1){
+					i1++;
+					console.log(Number(list[0].textContent*i1));
+					sum=15.5*i1;
+			}
+			if(num==2){
+					i1--;
+					console.log(Number(list[0].textContent*i1));
+					sum=15.5*i1;
+			}
+			if(num==3){
+					i2++;
+					console.log(Number(list2[0].textContent*i2));
+					sum2=17*i2;
+			}
+			if(num==4){
+					i2--;
+					console.log(Number(list2[0].textContent*i2));
+					sum2=17*i2;
+			}
+			if(num==5){
+					i3++;
+					console.log(Number(list3[0].textContent*i3));
+					sum3=20*i3;
+			}
+			if(num==6){
+					i3--;
+					console.log(Number(list3[0].textContent*i3));
+					sum3=20*i3;
+			}
+			if(num==7){
+					i4++;
+					console.log(Number(list4[0].textContent*i4));
+					sum4=25*i4;
+			}
+			if(num==8){
+					i4--;
+					console.log(Number(list4[0].textContent*i4));
+					sum4=25*i4;
+			}
+			if(num==9){
+					i5++;
+					console.log(Number(list5[0].textContent*i5));
+					sum5=30*i5;
+			}
+			if(num==10){
+					i5--;
+					console.log(Number(list5[0].textContent*i5));
+					sum5=30*i5;
+			}
+			
+			var text = document.getElementById("text");
+			text.innerHTML=i1;
+			var text2 = document.getElementById("text2");
+			text2.innerHTML=i2;
+			var text3 = document.getElementById("text3");
+			text3.innerHTML=i3;
+			var text4 = document.getElementById("text4");
+			text4.innerHTML=i4;
+			var text5 = document.getElementById("text5");
+			text5.innerHTML=i5;
+			
+			var heji = document.getElementById("heji");
+			heji.innerHTML=sum+sum2+sum3+sum4+sum5;
+
+	}
+			
+	</script>
+	
+	</head>
+	<body>
+		<div class="box">
+			<header>
+				<p>商家信息</p>
+			</header>
+			<!-- 商家logo -->
+			<div class=" business-logo">
+				<img src="img/sj01.png" />
+			</div>
+			<!-- 商家信息 -->
+			<div class="business-info">
+				<h1>万家饺子(软件园E18店)</h1>
+				<p>￥15起送 ￥3配送</p>
+				<p>各种饺子炒菜</p>
+			</div>
+			<!-- 食品部分 -->
+			<ul class="foot">
+				<li>
+					<div class="foot-left">
+						<img src="img/sp01.png"/>
+						<div class="foot-left-info">
+							
+							<h3>纯肉鲜肉(水饺)</h3>
+							<div class="add1">
+								<img style="height: 5vw;width: 5vw;" class="jian" onclick="add1(2)" src="img/减少.png" />
+								<span id="text">0</span>
+								<img style="height: 5.5vw;width: 5.5vw;" class="jia" onclick="add1(1)" src="img/增加.png" />
+							</div>
+							<p>新鲜猪肉</p>
+							<p class="list">15</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="foot-left">
+						<img src="img/sp02.png"/>
+						<div class="foot-left-info">
+							<h3>玉米鲜肉</h3>
+							<div class="add1">
+								<img style="height: 5vw;width: 5vw;" class="jian" onclick="add1(4)" src="img/减少.png" />
+								<span id="text2">0</span>
+								<img style="height: 5.5vw;width: 5.5vw;" class="jia" onclick="add1(3)" src="img/增加.png" />
+							</div>
+							<p>新鲜猪肉</p>
+							<p class="list2">17</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="foot-left">
+						<img src="img/sp03.png"/>
+						<div class="foot-left-info">
+							<h3>虾仁三鲜(水饺)</h3>
+							<div class="add1">
+								<img style="height: 5vw;width: 5vw;" class="jian" onclick="add1(6)" src="img/减少.png" />
+								<span id="text3">0</span>
+								<img style="height: 5.5vw;width: 5.5vw;" class="jia" onclick="add1(5)" src="img/增加.png" />
+							</div>
+							<p>新鲜猪肉</p>
+							<p class="list3">20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="foot-left">
+						<img src="img/sp04.png"/>
+						<div class="foot-left-info">
+							<h3>素三鲜(水饺)</h3>
+							<div class="add1">
+								<img style="height: 5vw;width: 5vw;" class="jian" onclick="add1(8)" src="img/减少.png" />
+								<span id="text4">0</span>
+								<img style="height: 5.5vw;width: 5.5vw;" class="jia" onclick="add1(7)" src="img/增加.png" />
+							</div>
+							<p>新鲜猪肉</p>
+							<p class="list4">25</p>
+						</div>
+					</div>
+				</li><li>
+					<div class="foot-left">
+						<img src="img/sp05.png"/>
+						<div class="foot-left-info">
+							<h3>角瓜鸡蛋(水饺)</h3>
+							<div class="add1">
+								<img style="height: 5vw;width: 5vw;" class="jian" onclick="add1(10)" src="img/减少.png" />
+								<span id="text5">0</span>
+								<img style="height: 5.5vw;width: 5.5vw;" class="jia" onclick="add1(9)" src="img/增加.png" />
+							</div>
+							<p>新鲜猪肉</p>
+							<p class="list5">30</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="foot-left">
+						<img src="img/sp06.png"/>
+						<div class="foot-left-info">
+							<h3>小白菜肉(水饺)</h3>
+							<p>新鲜猪肉</p>
+							<p>￥15</p>
+						</div>
+					</div>
+				</li><li>
+					<div class="foot-left">
+						<img src="img/sp07.png"/>
+						<div class="foot-left-info">
+							<h3>芹菜牛肉(水饺)</h3>
+							<p>新鲜猪肉</p>
+							<p>￥15</p>
+						</div>
+					</div>
+				</li>	
+			</ul>
+			<!-- 购物车 -->
+			<div class="cart">
+				<div class="cart-left">
+					<div class="cart-left-img">
+						<img src="img/购物车%20(1).png" />
+						<div class="three">3</div>
+					</div>
+					<div class="cart-left-info">
+						<p class="p1">总金额：￥<span id="heji">元</span></p>
+						<p class="p2" >另需配送费3元</p>
+					</div>
+				</div>
+				<div class="cart-right">
+					<a style="color: white;text-decoration: none;" href="确认订单.html"><div class="cart-right-info" >
+						去结算
+					</div></a>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>

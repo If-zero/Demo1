@@ -1,0 +1,136 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 100%;
+	height: 100%;
+	
+}
+.box header{
+	color: white;
+	background-color: #0097EF;
+	width: 100%;
+	height: 12vw;
+	font-size: 4.8vw;
+	position: fixed;
+	left: 0;
+	top: 0;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.xinxi{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-top: 12vw;
+	box-sizing: border-box;
+	padding: 4vw 4vw 0;
+	font-size: 4vw;
+	font-weight: 300;
+	
+	color: #999999;
+}
+.order-info{
+	box-sizing: border-box;
+	padding: 0 0 0 4vw;
+	font-size: 4vw;
+	color: #666666;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.order-info p{
+	margin: 0;
+	padding: 0;
+}
+.order-detailed{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.order-detailed li{
+	width: 100%;
+	box-sizing: border-box;
+
+	padding: 1vw 4vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.order-detailed p{
+	margin: 0;
+	font-size: 3vw;
+	color: #666666;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.payment-type{
+	width: 100%;
+}
+.payment-type li{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 4vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.payment-type li img{
+	width: 33vw;
+	height: 8.9vw;
+}
+.button{
+	width: 100%;
+	height: 10vw;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background-color: #38CA73;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer{
+	width: 100%;
+	height: 14vw;
+	border-top: solid 1px #DDD;
+	background-color: #fff;
+	
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer li{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: #999;font-size: 2.8vw;
+	padding: 0;
+}
+	
+.footer li p{
+	margin: 0;
+	padding: 0;
+}
+	
+
+.footer li img{
+	height: 6vw;
+	width: 6vw;
+	padding-top:2vw ;
+}

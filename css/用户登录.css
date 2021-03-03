@@ -1,0 +1,149 @@
+body,html{
+	margin: 0;
+	padding: 0;
+}
+
+.box{
+	width:100%;
+	height:100%;
+	
+}
+.header{
+	width: 100%;
+	height: 12vw;
+	background-color: #0097FF;
+	color: white;
+	font-size: 4.8vw;
+	
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 4.8vw;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	
+}
+ul li{
+	padding-top: 10vw;
+}
+.phone{
+	font-size: 3vw;
+	font-weight: 700;
+	color: #666;
+	outline: none;
+	padding: 0;
+	width: 100%;
+	margin-top: 12vw;
+	margin-bottom: 14vw;
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 5vw;
+
+}
+.phone input{
+	list-style: none;
+	outline: none;
+}
+.password{
+	font-size: 3vw;
+	font-weight: 700;
+	color: #666;
+	outline: none;
+	padding: 0;
+	width: 100%;
+	margin-top: 0vw;
+	margin-bottom: 14vw;
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 5vw;
+	
+}
+.password input{
+	list-style: none;
+	outline: none;
+}
+.kuang{
+	height: 10vw;
+	width: 90%;
+	font-size: 3.8vw;
+	background-color: #38ca73;
+	border-radius: 4vw;
+	border: none;
+	outline: none;
+	color: white;
+	margin-left: 5vw;
+}
+.denglu{
+	background-color:#38ca73;
+	color: white;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	display: flex;
+	margin-left: 45%;
+	line-height: 10vw;height: 10vw;
+	font-weight: 900;
+	
+}
+.kuang2{
+	height: 10vw;
+	width: 90%;
+	font-size: 3.8vw;
+	background-color: #EEEEEE;
+	border-radius: 4vw;
+	border: none;
+	outline: none;
+	margin-left: 5vw;
+}
+.zhuce{
+	background-color:E#EEEEEE;
+	color: #666;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	display: flex;
+	margin-left: 45%;
+	line-height: 10vw;height: 10vw;
+	font-weight: 900;
+	
+}
+.footer{
+	width: 100%;
+	height: 14vw;
+	border-top: solid 1px #DDD;
+	background-color: #fff;
+	
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer li{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: #999;font-size: 2.8vw;
+	padding: 0;
+}
+
+	.footer li p{
+		margin: 0;
+	}
+
+.footer li img{
+	height: 6vw;
+	width: 6vw;
+	padding-top:2vw ;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--清除默认样式 -->
+		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
+
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				document.onscroll = function() {
+					//获取已经滚屏的高度
+					var s1 = document.documentElement.scrollTop; //html
+					var s2 = document.body.scrollTop; //body
+					var scroll_height = s1 == 0 ? s2 : s1;
+					console.log(scroll_height);
+					//如果这个高度超过了12vw
+					var view = document.documentElement.clientWidth;
+					var search = document.getElementById("search");
+					if (scroll_height >= 0.12 * view) { //header的高度
+						//把search变为固定定位
+						search.style.position = "fixed";
+						search.style.left = "0";
+						search.style.top = "0";
+					} else { //否则就正常定位static
+						search.style.position = "static";
+					}
+				}
+			}
+		</script>
+		<style type="text/css">
+			.container {
+				width: 100vw;
+				height: 100vh;
+			}
+
+			.header {
+				width: 100vw;
+				height: 12vw;
+				line-height: 12vw;
+				background-color: #008CFF;
+				/* padding-left:3.5vw; */
+				z-index: 2;
+			}
+
+			.search {
+				width: 100vw;
+				height: 13vw;
+				line-height: 13vw;
+				background-color: #008CFF;
+				/* 上下左右都居中 */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.header span {
+				padding-left: 3.5vw;
+				font-size: 5vw;
+				color: white;
+				font-weight: bold;
+			}
+
+			.header i {
+				font-size: 2.5vw;
+				color: white;
+			}
+
+			.search .content {
+				width: 95vw;
+				font-size: 4vw;
+				font-family: "宋体";
+				color: #ccc;
+				background-color: #fff;
+				height: 10vw;
+				line-height: 10vw;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.footer {
+				width: 100vw;
+				height: 13.3vw;
+				border-top: 1px solid #ccc;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				z-index: 10;
+			}
+
+			.footer ul {
+				height: 13.3vw;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: #fff;
+			}
+
+			.footer ul li {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-weight: bold;
+				color: #818181;
+				font-size: 5vw;
+			}
+
+			.footer ul li:hover,
+			.footer ul a:hover {
+				color: #0097ff;
+			}
+
+			.footer ul a {
+				color: #818181;
+				font-size: 2.5vw;
+			}
+
+			.middle {
+				width: 100vw;
+				/* 超出高度时,自动显示滚动条 */
+				overflow: auto;
+				background-color: white;
+				display: flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: center;
+			}
+			.food{
+				width: 95vw;
+				height: 47vw;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.food .item{
+				display: flex;
+				flex-direction: column;
+			}
+			.food .item a{
+				font-size: 3.5vw;
+				color: #737373;
+				text-align: center;
+				font-weight: 800;
+			}
+			.food .item img{
+				width: 16vw;
+			}
+			.quality{
+				width: 95vw;
+				height: 29.6vw;
+				background-image: url(images/index_banner.png);
+				/* 背景宽高自适应 */
+				background-size: cover;
+				background-repeat: no-repeat;
+				
+			}
+			.quality h3{
+				margin-top: 3.5vw;
+				margin-left: 3.5vw;
+				margin-bottom: 1vw;
+			}
+			.quality p{
+				font-size: 4vw;
+				color: #7F7F7F;
+				margin-left: 3.5vw;
+				margin-bottom: 1vw;
+			}
+			.quality a{
+				font-size: 3vw;
+				margin-left: 3.5vw;
+				color: #AF8260;
+				font-weight: 800;
+			}
+			.vip{
+				width: 95vw;
+				height:11vw ;
+				background-color: #F8E4A4;
+				margin-top: 1vw;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.vip img{
+				width: 5.3vw;
+				margin-left: 4vw;
+			}
+			.vip .left{
+				flex: 3;
+			}
+			.vip .right{
+				flex: 1;
+			}
+			.vip .left .child01{
+				font-weight: bold;
+				font-size: 3.8vw;
+				color: #644F1B;
+			}
+			.vip .child02{
+				font-size: 2.9vw;
+				color: #644F1B;
+				margin-right: 2vw;
+			}
+			.business{
+				width: 95vw;
+				height: 14vw;
+				background-color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.business .line{
+				color: #888;
+			}
+			.business .txt{
+				margin: 0 3vw;
+			}
+			.search-key ul{
+				width: 90vw;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			.search-key ul li a{
+				color: #555;
+				font-size: 3.8vw;
+			}
+			.product{
+				width: 95vw;
+				height: 185vw;
+				margin-top: 5vw;
+				
+			}
+			.product .product-item{
+				width: 95vw;
+				height: 45vw;
+				background-color: #fff;
+				display: flex;
+				border-bottom: 1px solid lightgray;
+			}
+			.product .product-item .item-1{
+				width: 18.1vw;
+			}
+			.product .product-item .item-2{
+				width: 53.3vw;
+				margin-left: 4vw;
+			}
+			.product .product-item .item-1 img{
+				width: 18.1vw;
+				margin: 2vw 0;
+			}
+			.yellow{
+				color: #FEC80E;
+			}
+			.product .product-item .item-2 li,.product .product-item .item-3 li{
+				font-size: 3vw;
+				color: #666;
+				margin: 2vw 0;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<!-- 头部 -->
+			<div class="header">
+				<span class="fa fa-map-marker ">&nbsp;东大软件园(B园)&nbsp;</span>
+				<i class="fa fa-caret-down"></i>
+
+			</div>
+			<div class="search" id="search">
+				<div class="content">
+					<i class="fa fa-search">
+					</i>
+					搜索饿了么商家商品名字、商品名称
+				</div>
+			</div>
+
+			<!--中间内容部分 -->
+			<div class="middle">
+				<!-- 美食部分 -->
+				<div class="food">
+					<div class="item">
+						<img src="images/dcfl01.png" >
+						<a href="#">美食</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl02.png" >
+						<a href="#">大牌惠吃</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl03.png" >
+						<a href="#">跑腿代购</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl04.png" >
+						<a href="#">汉堡披萨</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl05.png" >
+						<a href="#">甜品饮品</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl06.png" >
+						<a href="#">素食简餐</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl07.png" >
+						<a href="#">地方小吃</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl08.png" >
+						<a href="#">米粉面馆</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl09.png" >
+						<a href="#">包子粥店</a>
+					</div>
+					<div class="item">
+						<img src="images/dcfl10.png" >
+						<a href="#">炸鸡炸串</a>
+					</div>
+				</div>
+				<!-- 品质套餐 -->
+				<div class="quality">
+					<h3>品质套餐</h3>
+					<p>搭配齐全吃得好</p>
+					<a href="#">立即抢购&gt;</a>
+				</div>
+				<!-- 超级会员 -->
+				<div class="vip">
+					<div class="left">
+						<img src="./images/super_member.png" >
+						<span class="child01">超级会员</span>
+						<span class="child02">·每月领20元红包</span>
+					</div>
+					<div class="right">
+						<a href="#" class="child02">限时6元开通&gt;</a>
+					</div>
+				</div>
+				<!-- 推荐商家 -->
+				<div class="business">
+					<span class="line">—— </span> <span class="txt">推荐商家</span> <span class="line">—— </span>
+				</div>
+				<!-- 搜索关键字 -->
+				<div class="search-key">
+					<ul>
+						<li><a href="#">综合排序<i class="fa fa-caret-down"></i></a></li>
+						<li><a href="#">距离最近</a></li>
+						<li><a href="#">销量最高</a></li>
+						<li><a href="#">筛选<i class="fa fa-filter"></i></a></li>
+					</ul>
+				</div>
+				<!-- 商品列表 -->
+				<div class="product">
+					<div class="product-item">
+						<div class="item-1">
+							<img src="./images/sj01.png" >
+						</div>
+						<div class="item-2">
+							<ul>
+								<li><h3>万家饺子</h3></li>
+								<li >
+								<i class="fa fa-star yellow"></i>
+								<i class="fa fa-star yellow"></i>
+								<i class="fa fa-star yellow"></i>
+								<i class="fa fa-star yellow"></i>
+								<i class="fa fa-star yellow"></i>
+								4.9 月售345单
+								</li>
+								<li>￥15起送 |￥3配送</li>
+								<li>各种饺子</li>
+								<li>饿了么新用户首单立减9元</li>
+								<li>特价商品5元起</li>
+							</ul>
+						</div>
+						<div class="item-3">
+							<ul>
+								<li>·</li>
+								<li>蜂鸟专送</li>
+								<li>3.22km/30分钟</li>
+								<li></li>
+								<li>2个活动<i class="fa fa-caret-down"></i></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--底部 -->
+			<div class="footer">
+				<ul>
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<i class="fa fa-compass"></i>
+						<a href="#">发现</a>
+
+					</li>
+					<li>
+						<i class="fa fa-list-alt"></i>
+						<a href="#">订单</a>
+					</li>
+					<li>
+						<i class="fa fa-user"></i>
+						<a href="#">我的</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
